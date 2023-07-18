@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import RangeCalendar from './components/calender'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <Button onPress={() => alert('Button pressed!')}>Test</Button>
+    <button role="button" tabIndex={0} onClick={() => alert('Button pressed!')}>Test2</button>
+    <div onClick={() => alert('Button pressed!')}>Test2 div</div>
+    <div role="button" tabIndex={0} onClick={() => alert('Button pressed!')}>Test2 div with role</div>
+    <Button onPress={() => alert('Button pressed!')}>Test3</Button>
+    <Button onPress={() => alert('Button pressed!')}>Test4</Button> */}
+    <div style={{padding:"20px"}}>
+
+
+<RangeCalendar aria-label="Trip dates"  />
+
+    <RangeCalendar aria-label="Trip dates" 
+      btnBackground="yellow"
+      btnStyles={{padding:"10px"}}
+      headreStyle={{color:"blue"}}
+      weekColor="purple"
+      weekStyles={{padding:"8px"}}
+      cellBackground="rgba(0,0,255,0.5)"
+      cellBackgroundSelected="pink"
+      cellStyles={{padding:"8px"}}
+      />
+      </div>
+    </>
   );
 }
 
